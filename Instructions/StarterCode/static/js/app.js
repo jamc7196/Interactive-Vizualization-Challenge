@@ -89,24 +89,27 @@ function getplots(id) {
             });
         });
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // 21)Create the function in order to change change event
+    function BBChanged(id) {
+    getplots(id);
+    getdemographicinfo(id);
+    }
+    // 22)Create an init function for the data rendering
+    function init() {
+    // 23) Create a variable tha select dropdown menu 
+    var otudropdown = d3.select("#selDataset");
+    // 24) Using d3 extract the json data get the id data to the dropdwown menu
+    d3.json("samples.json").then((bellydata)=> {
+        console.log(bellydata)
+        bellydata.names.forEach(function(name) {
+            otudropdown.append("option").text(name).property("value");
+        });
+        // call the functions to display the data and the plots to the page
+        getplots(bellydata.names[0]);
+        getdemoinfo(bellydata.names[0]);
+    });
+}
+init();    
     
     
     
