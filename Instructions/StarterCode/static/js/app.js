@@ -4,7 +4,7 @@
 function getplots(id) {
         d3.json("samples.json").then(bellybuttonsample =>{
             console.log(bellybuttonsample) //test succesfull message printed in console
-            var otuids = bellybuttonample.samples[0].otu_ids;
+            var otuids = bellybuttonsample.samples[0].otu_ids;
             console.log(otuids)//test succesfull message printed in console
             //3)rom the the json sample,  extract and organized the values and labels required using the slice function (reverse the values variable)
             var bellybuttonvalues =  bellybuttonsample.samples[0].sample_values.slice(0,10).reverse();
@@ -17,7 +17,7 @@ function getplots(id) {
             var otuid = top10otu.map(d => "OTU " + d);
             console.log(`The followings otu ids were found: ${otuid}`)
             //6) Using the slice function get the top 10 labels for the plot
-            var top10labels =  bellybuttonample.samples[0].otu_labels.slice(0,10);
+            var top10labels =  bellybuttonsample.samples[0].otu_labels.slice(0,10);
             console.log(`The following labels were found: ${top10labels}`)
             //test sucesfull message printed in console
             //7) Create a customize trace variable for the bar charts with horizontal orientation
