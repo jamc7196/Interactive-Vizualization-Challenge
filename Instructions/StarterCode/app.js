@@ -72,7 +72,7 @@ function getPlots(id) {
         });
     }  
     // 15)Create a new function to extract the demographic data
-    function getdemographicinfo(id) {
+    function getDemoInfo(id) {
     // 16) Using d3, read the json file to extract data and create a metadavariable
         d3.json("samples.json").then((bellydata)=> {
             var metadata_bb = bellydata.metadata;
@@ -91,22 +91,22 @@ function getPlots(id) {
     }
     // 21)Create the function in order to change change event
     function BBChanged(id) {
-    getPlots(id);
-    getdemographicinfo(id);
+        getPlots(id);
+        getDemoInfo(id);
     }
     // 22)Create an init function for the data rendering
     function init() {
     // 23) Create a variable tha select dropdown menu 
-    var otudropdown = d3.select("#selDataset");
+        var otudropdown = d3.select("#selDataset");
     // 24) Using d3 extract the json data get the id data to the dropdwown menu
-    d3.json("samples.json").then((bellydata)=> {
-        console.log(bellydata)
-        bellydata.names.forEach(function(name) {
+        d3.json("samples.json").then((bellydata)=> {
+            console.log(bellydata)
+            bellydata.names.forEach(function(name) {
             otudropdown.append("option").text(name).property("value");
         });
         // call the functions to display the data and the plots to the page
         getPlots(bellydata.names[0]);
-        getdemographicinfo(bellydata.names[0]);
+        getDemoInfo(bellydata.names[0]);
     });
 }
 init();    
