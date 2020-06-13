@@ -1,7 +1,7 @@
 //Student Jorge Alberto Muñozcano Castro
 //1) create a local host using Github
 //2) create  a function that helps you read, organized and vizualized sample.json inside the data carpet, looked  for the otu  variable.
-function getplots(id) {
+function getPlots(id) {
         d3.json("samples.json").then(bellybuttonsample =>{
             console.log(bellybuttonsample) //test succesfull message printed in console
             var otuids = bellybuttonsample.samples[0].otu_ids;
@@ -45,7 +45,7 @@ function getplots(id) {
                 }
             };
             //10)Create the bar plot with Plotly function
-            Plotly.newPlot("bar",bellybuttondata,bellylayout);    
+        Plotly.newPlot("bar",bellybuttondata,bellylayout);    
             //test succesfull bar chart generated
             // 11) Create a new trace variable in order to create a bubble chart
             var tracebelly2 = {
@@ -91,7 +91,7 @@ function getplots(id) {
     }
     // 21)Create the function in order to change change event
     function BBChanged(id) {
-    getplots(id);
+    getPlots(id);
     getdemographicinfo(id);
     }
     // 22)Create an init function for the data rendering
@@ -105,7 +105,7 @@ function getplots(id) {
             otudropdown.append("option").text(name).property("value");
         });
         // call the functions to display the data and the plots to the page
-        getplots(bellydata.names[0]);
+        getPlots(bellydata.names[0]);
         getdemographicinfo(bellydata.names[0]);
     });
 }
