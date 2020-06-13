@@ -45,7 +45,7 @@ function getplots(id) {
                 }
             };
             //10)Create the bar plot with Plotly function
-            Plotly.newPlot("bar", bellybuttondata, bellylayout);
+            Plotly.newPlot("bar",bellybuttondata,bellylayout);    
             //test succesfull bar chart generated
             // 11) Create a new trace variable in order to create a bubble chart
             var tracebelly2 = {
@@ -67,7 +67,7 @@ function getplots(id) {
             // 13)Create data variable for trace created befored
             var bellybuttondata2 = [tracebelly2];
             // 14)create the bubble plot with Plotly function
-            Plotly.newPlot("bubble", bellybuttondata2, bellylayout2); 
+        Plotly.newPlot("bubble", bellybuttondata2, bellylayout2); 
             //test succesfull bar chart generated
         });
     }  
