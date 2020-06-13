@@ -90,7 +90,7 @@ function getPlots(id) {
         });
     }
     // 21)Create the function in order to change change event
-    function BBChanged(id) {
+    function optionChanged(id) {
         getPlots(id);
         getDemoInfo(id);
     }
