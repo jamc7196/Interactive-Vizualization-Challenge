@@ -85,7 +85,7 @@ function getplots(id) {
            demographicwithbb.html("");    
          // 20) Extract demographic data data for each id and append the info into the panel with an object
             Object.entries(studyresult).forEach((key) => {   
-                demographicinfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
+                demographicwithbb.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
             });
         });
     }
