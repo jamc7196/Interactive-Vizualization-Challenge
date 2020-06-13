@@ -2,7 +2,7 @@
 //1) create a local host using Github
 //2) create  a function that helps you read, organized and vizualized sample.json inside the data carpet, looked  for the otu  variable.
 function getplots(id) {
-        d3.json("samples.json").then (bellybuttonample =>{
+        d3.json("samples.json").then(bellybuttonsample =>{
             console.log(bellybuttonsample) //test succesfull message printed in console
             var otuids = bellybuttonample.samples[0].otu_ids;
             console.log(otuids)//test succesfull message printed in console
@@ -106,7 +106,7 @@ function getplots(id) {
         });
         // call the functions to display the data and the plots to the page
         getplots(bellydata.names[0]);
-        getdemoinfo(bellydata.names[0]);
+        getdemographicinfo(bellydata.names[0]);
     });
 }
 init();    
