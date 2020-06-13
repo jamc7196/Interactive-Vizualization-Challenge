@@ -24,7 +24,7 @@ function getplots(id) {
             var tracebelly = {
                 x: bellybuttonvalues,
                 y: otuid,
-                text: labels,
+                text: top10labels,
                 marker: {color: 'purple'},
                 type:"bar",
                 orientation: "h",
