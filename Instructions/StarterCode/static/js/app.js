@@ -12,7 +12,7 @@ function getplots(id) {
             var bellybuttonlabels =  bellybuttonsample.samples[0].otu_labels.slice(0,10);
             console.log (bellybuttonlabels)//testsuccesfull message printed in console
              // 4) From the the json sample, find the top 10 otu ids for the required plot using the slice function
-            var top10otu = ( sampledata.samples[0].otu_ids.slice(0, 10)).reverse();
+            var top10otu = (bellybuttonsample.samples[0].otu_ids.slice(0, 10)).reverse();
             // 5) Using the map function, get the otu id's to the desired form for the plot
             var otuid = top10otu.map(d => "OTU " + d);
             console.log(`The followings otu ids were found: ${otuid}`)
